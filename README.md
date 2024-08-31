@@ -41,7 +41,7 @@ Include the `my_UART.c` and `my_UART.h` files in your STM32 project.
 
 Before using UART, make sure to initialize it in your `main.c` file:
 
-`int main(void) {
+` int main(void) {
     // System initialization code here
 
     UART_Init();  // Initialize the UART
@@ -49,8 +49,8 @@ Before using UART, make sure to initialize it in your `main.c` file:
     while (1) {
         // Your application code here
     }
-}
-`
+} `
+
 
 ### 4\. Sending Data
 
@@ -80,7 +80,7 @@ In the main loop, the library can send and receive data like this:
 
 
 
-`int main(void) {
+` int main(void) {
     SysClockConfig();
     UART_Init();  // Initialize UART
 
@@ -90,8 +90,8 @@ In the main loop, the library can send and receive data like this:
         uart_send_string(received_data);  // Echo the received string back
         free(received_data);  // Free the memory allocated for the received string
     }
-}
-`
+}`
+
 
 Function Descriptions
 ---------------------
