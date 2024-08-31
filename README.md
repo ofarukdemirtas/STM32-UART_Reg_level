@@ -41,6 +41,9 @@ Include the `my_UART.c` and `my_UART.h` files in your STM32 project.
 
 Before using UART, make sure to initialize it in your `main.c` file:
 
+c
+
+Kodu kopyala
 
 `int main(void) {
     // System initialization code here
@@ -50,7 +53,8 @@ Before using UART, make sure to initialize it in your `main.c` file:
     while (1) {
         // Your application code here
     }
-}`
+}
+`
 
 ### 4\. Sending Data
 
@@ -63,7 +67,6 @@ uart_send_string("Hello!\n");   // Send a string`
 
 You can receive characters or strings over UART with dynamic memory allocation:
 
-
 `char *received_string = uart_receive_dynamic_string();   // Receive a string dynamically
 uart_send_string(received_string);  // Send the received string back
 free(received_string);  // Free the dynamically allocated memory`
@@ -72,11 +75,14 @@ free(received_string);  // Free the dynamically allocated memory`
 
 You can set the baud rate of UART by modifying the `UART_BAUDRATE` define in `my_UART.c`:
 
+
 `#define UART_BAUDRATE 9600  // Default baud rate is 9600`
 
 ### Example
 
 In the main loop, the library can send and receive data like this:
+
+
 
 `int main(void) {
     SysClockConfig();
@@ -88,7 +94,8 @@ In the main loop, the library can send and receive data like this:
         uart_send_string(received_data);  // Echo the received string back
         free(received_data);  // Free the memory allocated for the received string
     }
-}`
+}
+`
 
 Function Descriptions
 ---------------------
