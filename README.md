@@ -80,17 +80,25 @@ In the main loop, the library can send and receive data like this:
 
 
 
-` int main(void) {
-    SysClockConfig();
-    UART_Init();  // Initialize UART
+int main(void) {
 
-    while (1) {
-        char *received_data = uart_receive_dynamic_string();  // Receive data dynamically
-        uart_send_string("Received: ");
-        uart_send_string(received_data);  // Echo the received string back
-        free(received_data);  // Free the memory allocated for the received string
-    }
-}`
+    SysClockConfig();
+
+    UART_Init();  // Initialize UART
+
+    while (1) {
+
+        char *received_data = uart_receive_dynamic_string();  // Receive data dynamically
+
+        uart_send_string("Received: ");
+
+        uart_send_string(received_data);  // Echo the received string back
+
+        free(received_data);  // Free the memory allocated for the received string
+
+    }
+
+}
 
 
 Function Descriptions
