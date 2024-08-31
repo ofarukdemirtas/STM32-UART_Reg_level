@@ -1,0 +1,4 @@
+../Core/Src/led_driver.c:12:6:user_led_init	16	static
+../Core/Src/led_driver.c:36:6:user_led_toggle	4	static
+../Core/Src/led_driver.c:42:6:user_led_set	4	static
+../Core/Src/led_driver.c:48:6:user_led_reset	4	static

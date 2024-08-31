@@ -1,0 +1,6 @@
+../Core/Src/my_UART.c:15:6:UART_Init	4	static
+../Core/Src/my_UART.c:41:6:uart_send_char	16	static
+../Core/Src/my_UART.c:47:6:uart_send_string	16	static
+../Core/Src/my_UART.c:54:6:uart_receive_char	4	static
+../Core/Src/my_UART.c:60:6:uart_receive_string	24	static
+../Core/Src/my_UART.c:71:7:uart_receive_string_dynamic	32	static
