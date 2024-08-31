@@ -41,10 +41,6 @@ Include the `my_UART.c` and `my_UART.h` files in your STM32 project.
 
 Before using UART, make sure to initialize it in your `main.c` file:
 
-c
-
-Kodu kopyala
-
 `int main(void) {
     // System initialization code here
 
