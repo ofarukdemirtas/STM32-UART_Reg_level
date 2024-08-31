@@ -31,10 +31,6 @@ Usage
 
 ### 1\. Clone the Repository
 
-bash
-
-Kodu kopyala
-
 `git clone https://github.com/yourusername/stm32-uart-library.git`
 
 ### 2\. Include the Files
@@ -45,9 +41,6 @@ Include the `my_UART.c` and `my_UART.h` files in your STM32 project.
 
 Before using UART, make sure to initialize it in your `main.c` file:
 
-c
-
-Kodu kopyala
 
 `int main(void) {
     // System initialization code here
@@ -63,10 +56,6 @@ Kodu kopyala
 
 You can send characters or strings over UART with the following functions:
 
-c
-
-Kodu kopyala
-
 `uart_send_char('A');           // Send a single character
 uart_send_string("Hello!\n");   // Send a string`
 
@@ -74,9 +63,6 @@ uart_send_string("Hello!\n");   // Send a string`
 
 You can receive characters or strings over UART with dynamic memory allocation:
 
-c
-
-Kodu kopyala
 
 `char *received_string = uart_receive_dynamic_string();   // Receive a string dynamically
 uart_send_string(received_string);  // Send the received string back
@@ -86,19 +72,11 @@ free(received_string);  // Free the dynamically allocated memory`
 
 You can set the baud rate of UART by modifying the `UART_BAUDRATE` define in `my_UART.c`:
 
-c
-
-Kodu kopyala
-
 `#define UART_BAUDRATE 9600  // Default baud rate is 9600`
 
 ### Example
 
 In the main loop, the library can send and receive data like this:
-
-c
-
-Kodu kopyala
 
 `int main(void) {
     SysClockConfig();
